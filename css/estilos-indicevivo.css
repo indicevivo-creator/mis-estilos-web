@@ -1,1 +1,277 @@
+<style>
+    :root {
+        --primary-bg: #0f172a; /* Azul noche profundo */
+        --card-bg: #1e293b;    /* Azul grisáceo suave */
+        --accent: #38bdf8;     /* Celeste vibrante para resaltar */
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+    }
 
+    body {
+        background-color: #f8fafc;
+        /*background-color: var(--primary-bg);*/
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    .contenedor-3 {
+        padding: 10px;
+        text-align: center;
+    }
+
+    h2 {
+        color: var(--text-main);
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        background: linear-gradient(to bottom right, #e2e8f0, #475569);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        color: var(--text-muted);
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+    .lista-beneficios {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Espacio uniforme entre cards */
+        margin-top: 20px;
+    }
+
+    .card-beneficios {
+        display: flex;
+        color: var(--text-main);
+        text-align: left;
+        border-radius: 16px; /* Bordes más redondeados para seguir el estilo */
+        padding: 1.2rem;
+        background: rgba(255, 255, 255, 0.03); /* Un fondo sutil para separar del fondo principal */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+    }
+
+    .card-beneficios:hover {
+        transform: translateY(-5px); /* Se eleva un poco en lugar de solo crecer */
+        background: rgba(255, 255, 255, 0.07);
+        border-color: var(--accent);
+    }
+
+    /* Estilo para los títulos de las cards */
+    .card-beneficios h3 {
+        margin: 0;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--accent); /* Color resaltado para el título */
+    }
+
+    /* Estilo para el texto de las cards */
+    .card-beneficios p {
+        margin: 8px 0 0 0;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.4;
+    }
+
+    /* Iconos sutiles (opcional) */
+    .card-beneficios i {
+        font-style: normal;
+    }
+    /* Nuevo contenedor para el icono */
+    .icono-contenedor {
+        display: flex;
+        align-items: center;     /* Centrado vertical */
+        justify-content: center; /* Centrado horizontal */
+        padding-right: 20px;     /* Distancia con respecto al título y párrafo */
+        flex-shrink: 0;          /* Evita que el icono se aplaste si hay mucho texto */
+        font-size: 1.2rem;       /* Tamaño del emoji/punto */
+    }
+
+    /* Clases de estado (opcional para lo que mencionaste de positivo/negativo) */
+    .punto-positivo i { color: #22c55e; } /* Verde */
+    .punto-negativo i { color: #ef4444; } /* Rojo */
+
+    /* Ajuste para que el fondo de la card se vea en fondo claro */
+    .card-beneficios {
+        background: #ffffff; /* Fondo blanco sólido para que destaque sobre el gris claro */
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e2e8f0;
+    }
+    .contenedor-garantia {
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 30px;
+        border: 2px solid #e2e8f0;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        margin-top: 20px;
+    }
+
+    .img-garantia {
+        width: 120px; /* Tamaño controlado del sello */
+        height: auto;
+        margin-bottom: 20px;
+        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    }
+
+    .texto-garantia-fuerte {
+        color: #1e293b;
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .texto-garantia-suave {
+        color: #64748b;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .badge-hotmart {
+        display: inline-block;
+        background-color: #f1f5f9;
+        color: #475569;
+        padding: 5px 15px;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 15px;
+    }
+    .contenedor-faq {
+        max-width: 100%;
+        margin: 20px auto;
+        text-align: left;
+    }
+
+    .faq-item {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        margin-bottom: 12px;
+        overflow: hidden; /* Importante para la animación */
+        transition: all 0.3s ease;
+    }
+
+    .faq-pregunta {
+        width: 100%;
+        padding: 18px 20px;
+        background: none;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        color: #1e293b;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .faq-icon {
+        color: var(--accent);
+        font-size: 1.4rem;
+        transition: transform 0.3s ease;
+    }
+
+    .faq-respuesta {
+        max-height: 0; /* Cerrado por defecto */
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: #f8fafc;
+    }
+
+    .faq-respuesta p {
+        padding: 0 20px 20px 20px;
+        margin: 0;
+        color: #64748b;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* Estado Activo (Controlado por JS) */
+    .faq-item.activa {
+        border-color: var(--accent);
+        box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.1);
+    }
+
+    .faq-item.activa .faq-respuesta {
+        max-height: 200px; /* Suficiente para el texto */
+        opacity: 1;
+        padding-top: 10px;
+    }
+
+    .faq-item.activa .faq-icon {
+        transform: rotate(45deg); /* El + se convierte en x */
+        color: #ef4444;
+    }
+    .contenedor-autor {
+        background: #ffffff;
+        border-radius: 24px;
+        padding: 40px 30px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.05);
+        margin-top: 20px;
+        position: relative;
+    }
+
+    .img-autor {
+        width: 140px; 
+        height: 140px;
+        object-fit: cover; /* Asegura que no se deforme la foto */
+        border-radius: 50%; /* Foto circular */
+        margin-bottom: 20px;
+        border: 4px solid #ffffff;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .img-autor:hover {
+        transform: scale(1.05);
+    }
+
+    .nombre-autor {
+        color: #1e293b;
+        font-weight: 800;
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+        letter-spacing: -0.5px;
+    }
+
+    .especialidad-autor {
+        display: inline-block;
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 20px;
+    }
+
+    /* Ajuste para las citas o frases destacadas del autor */
+    .biografia-texto {
+        color: #64748b;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 15px;
+        text-align: left; /* La biografía suele leerse mejor alineada a la izquierda */
+    }
+
+    /* Un detalle elegante: comillas decorativas */
+    .biografia-texto span.resaltado {
+        color: #1e293b;
+        font-weight: 600;
+        font-style: italic;
+    }    
+</style>
