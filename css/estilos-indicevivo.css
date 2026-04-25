@@ -28,6 +28,24 @@
         line-height: 1.6;
         margin-bottom: 30px;
     }
+    .portada-wrapper {
+        position: relative;
+        padding: 0 10px 10px 10px;
+    }
+
+    .portada {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 16px;
+        display: block;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+    }
+
+    .portada:hover {
+        transform: scale(1.02);
+    }
     .lista-beneficios {
         display: flex;
         flex-direction: column;
@@ -41,16 +59,17 @@
         text-align: left;
         border-radius: 16px; /* Bordes más redondeados para seguir el estilo */
         padding: 1.2rem;
-        background: rgba(255, 255, 255, 0.03); /* Un fondo sutil para separar del fondo principal */
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        background: transparent; /* Un fondo sutil para separar del fondo principal */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(148, 163, 184, 0.2);
         transition: all 0.3s ease;
     }
 
     .card-beneficios:hover {
         transform: translateY(-5px); /* Se eleva un poco en lugar de solo crecer */
-        background: rgba(255, 255, 255, 0.07);
+        background: rgba(255, 255, 255, 0.02);
         border-color: var(--accent);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     }
 
     /* Estilo para los títulos de las cards */
