@@ -6,8 +6,8 @@
         --text-main: #f8fafc;
         --text-muted: #94a3b8;
     }
-
-    .contenedor-3 {
+  	
+  	.contenedor-3 {
         padding: 10px;
         text-align: center;
     }
@@ -28,6 +28,7 @@
         line-height: 1.6;
         margin-bottom: 30px;
     }
+
     .portada-wrapper {
         position: relative;
         padding: 0 10px 10px 10px;
@@ -53,23 +54,34 @@
         margin-top: 20px;
     }
 
-    .card-beneficios {
+  .card-beneficios {
         display: flex;
+        align-items: flex-start; /* Alinea el contenido al inicio */
+        padding: 1.2rem;
+        border-radius: 16px;
+
+        /* Fondo transparente para adaptarse a cualquier modo */
+        background: transparent; 
+
+        /* Borde sutil que se nota en blanco y no molesta en oscuro */
+        border: 1px solid rgba(148, 163, 184, 0.2); 
+
+        /* Sombra equilibrada */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+
+        /* Color de texto heredado de las variables globales */
         color: var(--text-main);
         text-align: left;
-        border-radius: 16px; /* Bordes más redondeados para seguir el estilo */
-        padding: 1.2rem;
-        background: transparent; /* Un fondo sutil para separar del fondo principal */
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        border: 1px solid rgba(148, 163, 184, 0.2);
         transition: all 0.3s ease;
     }
 
     .card-beneficios:hover {
-        transform: translateY(-5px); /* Se eleva un poco en lugar de solo crecer */
-        background: rgba(255, 255, 255, 0.02);
+        transform: translateY(-5px);
+        /* Al pasar el mouse, el borde se ilumina con el color de acento */
         border-color: var(--accent);
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        /* Un ligero toque de fondo al hacer hover ayuda a la interactividad */
+        background: rgba(255, 255, 255, 0.02); 
     }
 
     /* Estilo para los títulos de las cards */
@@ -93,7 +105,7 @@
     /* Iconos sutiles (opcional) */
     .card-beneficios i {
         font-style: normal;
-    }
+   }
     /* Nuevo contenedor para el icono */
     .icono-contenedor {
         display: flex;
@@ -104,18 +116,12 @@
         font-size: 1.2rem;       /* Tamaño del emoji/punto */
     }
 
-    /* Clases de estado (opcional para lo que mencionaste de positivo/negativo) */
+    /* Clases de estado (opcional para positivo/negativo) */
     .punto-positivo i { color: #22c55e; } /* Verde */
     .punto-negativo i { color: #ef4444; } /* Rojo */
 
-    /* Ajuste para que el fondo de la card se vea en fondo claro */
-    .card-beneficios {
-        background: #ffffff; /* Fondo blanco sólido para que destaque sobre el gris claro */
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        border: 1px solid #e2e8f0;
-    }
     .contenedor-garantia {
-        background: #ffffff;
+        background: transparent;
         border-radius: 20px;
         padding: 30px;
         border: 2px solid #e2e8f0;
@@ -131,7 +137,6 @@
     }
 
     .texto-garantia-fuerte {
-        color: #1e293b;
         font-weight: 700;
         font-size: 1.1rem;
         margin-bottom: 10px;
@@ -162,8 +167,9 @@
     }
 
     .faq-item {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
+        /*background: #ffffff;*/
+        background: transparent;
+      	border: 1px solid #e2e8f0;
         border-radius: 12px;
         margin-bottom: 12px;
         overflow: hidden; /* Importante para la animación */
@@ -181,7 +187,7 @@
         cursor: pointer;
         font-family: 'Inter', sans-serif;
         font-weight: 700;
-        color: #1e293b;
+        color: #64748b;
         font-size: 1rem;
         text-align: left;
     }
@@ -197,7 +203,7 @@
         opacity: 0;
         overflow: hidden;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        background-color: #f8fafc;
+      	background: transparent;
     }
 
     .faq-respuesta p {
