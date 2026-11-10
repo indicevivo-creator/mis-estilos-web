@@ -248,6 +248,7 @@ line-height: 1.6;
 }
 .acordeon-item.activo .acordeon-content {
 max-height: 400px;
+border-color: var(--accent);  
 }
 .flecha {
 transition: transform 0.3s ease;
