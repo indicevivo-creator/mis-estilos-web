@@ -247,7 +247,7 @@ margin: 0;
 line-height: 1.6;
 }
 .acordeon-item.activo .acordeon-content {
-max-height: 400px;
+max-height: 600px;
 }
 .flecha {
 transition: transform 0.3s ease;
