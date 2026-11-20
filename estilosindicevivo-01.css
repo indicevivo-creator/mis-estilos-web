@@ -264,8 +264,8 @@ transform: rotate(180deg);
     width:100%;
     line-height:1.4em;
     padding:25px 20px;
-    border:1px solid var(--border-color);
-    border-radius:var(--radius)
+    border:1px solid var(--accent);
+    border-radius:10px;
 }
  .cta-header{
     display:flex;
@@ -276,76 +276,16 @@ transform: rotate(180deg);
     color:var(--title-color);
     font-weight:700
 }
- .cta-price.is-free{
-    color:#4caf50
-}
- .cta-sale{
-    display:flex;
-    align-items:center;
-    font-size:14px;
-    color:#4caf50;
-    font-weight:400;
-    text-transform:uppercase;
-    margin:5px 0 0
-}
- .cta-sale:before{
-    display:inline-block;
-    content:'\e54e';
-    font-family:'Material Icons Round';
-    font-size:14px;
-    font-weight:400;
-    -webkit-transform:scaleX(-1);
-    transform:scaleX(-1);
-    margin:-1px 3px 0 0
-}
- .rtl .cta-sale:before{
-    -webkit-transform:scaleX(1);
-    transform:scaleX(1);
-    margin:-1px 0 0 3px
-}
- .tfy-cta a.cta-button{
+.cta-button{
     display:flex;
     align-items:center;
     justify-content:center;
     height:46px;
     background-color:var(--button-bg);
-    font-family:var(--body-font);
+    //font-family:var(--body-font);
     font-size:18px;
     color:var(--button-color);
     font-weight:400;
     text-decoration:none;
     padding:0 40px
-}
- .tfy-cta a.cta-button:before{
-    display:inline-block;
-    content:'\e8cc';
-    font-family:'Material Icons Round';
-    font-size:20px;
-    font-weight:400;
-    margin:0 6px 0 0
-}
- .tfy-cta a.cta-button.download:before{
-    content:'\f090'
-}
- .tfy-cta a.cta-button.contact:before{
-    content:'\e0e1'
-}
- .tfy-cta a.cta-button.whatsapp:before{
-    content:'\f232';
-    font-family:'Font Awesome 5 Brands';
-    font-style:normal
-}
- .tfy-cta a.cta-button.paypal:before{
-    content:'\f1ed';
-    font-family:'Font Awesome 5 Brands';
-    font-style:normal
-}
- .tfy-cta a.cta-button.gift:before{
-    content:'\e8f6'
-}
- .rtl .tfy-cta a.cta-button:before{
-    margin:0 0 0 6px
-}
- .tfy-cta .cta-button:hover{
-    opacity:.9
 }
