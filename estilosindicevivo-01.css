@@ -257,37 +257,22 @@ transition: transform 0.3s ease;
 .acordeon-item.activo .flecha {
 transform: rotate(180deg);
 }
-.tfy-cta{
-   display:flex;
-   align-items:center;
-   justify-content:space-between;
-   flex-wrap:wrap;
-   position:relative;
-   width:100%;
-   line-height:1.4em;
-   padding:25px 20px;
-   border:1px solid var(--accent);
-   border-radius:10px;
+.wsp-btn {
+  background-color: #4fcc5c;
+  border: none;
+  outline: none;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center;     /* Centrado vertical */
+  padding: 15px 10px;
 }
-.cta-header{
-   display:flex;
-   flex-direction:column
+
+.wsp-btn:hover {
+  transform: scale(1.02);
 }
-.cta-price{
-   font-size:24px;
-   /*color:var(--title-color);*/
-   font-weight:700
-}
-.cta-button{
-   display:flex;
-   align-items:center;
-   justify-content:center;
-   height:46px;
-   background-color:var(--button-bg);
-   /*font-family:var(--body-font);*/
-   font-size:18px;
-   color:var(--button-color);
-   font-weight:400;
-   text-decoration:none;
-   padding:0 40px
-}
+
